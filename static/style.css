@@ -1,0 +1,95 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EEEEEE;
+    color: #003249;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #003249;
+    padding: 15px 30px;
+}
+
+.navbar a {
+    color: #EEEEEE;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #770000;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 30px 0;
+}
+
+/* Card */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #003249;
+}
+
+/* Button */
+.btn {
+    background-color: #003249;
+    color: #EEEEEE;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #770000;
+}
+
+/* Form */
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #003249;
+    border-radius: 6px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Prediction Result */
+.result {
+    background-color: #003249;
+    color: #EEEEEE;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: #003249;
+    color: #EEEEEE;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}

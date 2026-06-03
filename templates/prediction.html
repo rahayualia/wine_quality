@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+    <h1>🤖 Prediksi Kualitas Wine</h1>
+
+    <form method="POST">
+
+        <label>Fixed Acidity</label>
+        <input type="number" step="any" name="fixed_acidity" required>
+
+        <label>Volatile Acidity</label>
+        <input type="number" step="any" name="volatile_acidity" required>
+
+        <label>Citric Acid</label>
+        <input type="number" step="any" name="citric_acid" required>
+
+        <label>Residual Sugar</label>
+        <input type="number" step="any" name="residual_sugar" required>
+
+        <label>Chlorides</label>
+        <input type="number" step="any" name="chlorides" required>
+
+        <label>Free Sulfur Dioxide</label>
+        <input type="number" step="any" name="free_sulfur_dioxide" required>
+
+        <label>Total Sulfur Dioxide</label>
+        <input type="number" step="any" name="total_sulfur_dioxide" required>
+
+        <label>Density</label>
+        <input type="number" step="any" name="density" required>
+
+        <label>pH</label>
+        <input type="number" step="any" name="pH" required>
+
+        <label>Sulphates</label>
+        <input type="number" step="any" name="sulphates" required>
+
+        <label>Alcohol</label>
+        <input type="number" step="any" name="alcohol" required>
+
+        <label>Wine Type</label>
+
+        <select name="wine_type">
+            <option value="0">Red Wine</option>
+            <option value="1">White Wine</option>
+        </select>
+
+        <button type="submit" class="btn">
+            Prediksi
+        </button>
+
+    </form>
+
+    {% if prediction %}
+    <div class="result">
+        <h2>Predicted Quality</h2>
+        <h1>{{ prediction }}</h1>
+    </div>
+    {% endif %}
+
+</div>
+
+{% endblock %}
