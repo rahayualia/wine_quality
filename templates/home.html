@@ -2,33 +2,111 @@
 
 {% block content %}
 
-<div class="card">
+<div class="card hero-card">
+
     <h1>🍷 Wine Quality Prediction System</h1>
 
-    <p>
-        Website ini digunakan untuk menganalisis kualitas wine menggunakan
-        Machine Learning Linear Regression.
+    <p class="subtitle">
+        Analisis dan prediksi kualitas wine menggunakan
+        <b>Machine Learning - Linear Regression</b>.
     </p>
 
     <p>
-        Sistem menyediakan dashboard analisis data serta fitur prediksi
-        kualitas wine berdasarkan karakteristik kimia wine.
+        Sistem ini membantu memprediksi kualitas wine berdasarkan
+        karakteristik kimia seperti acidity, sugar, alcohol,
+        sulphates, dan parameter lainnya.
     </p>
 
-    <a href="/predict">
-        <button class="btn">Mulai Prediksi</button>
-    </a>
+    <div class="button-group">
+        <a href="/predict">
+            <button class="btn">
+                🔮 Mulai Prediksi
+            </button>
+        </a>
+
+        <a href="/dashboard">
+            <button class="btn-secondary">
+                📊 Lihat Dashboard
+            </button>
+        </a>
+    </div>
+
 </div>
 
-<div class="card">
-    <h2>Fitur Sistem</h2>
 
-    <ul>
-        <li>Dashboard Analisis Wine</li>
-        <li>Visualisasi Data Interaktif</li>
-        <li>Prediksi Kualitas Wine</li>
-        <li>Machine Learning Linear Regression</li>
-    </ul>
+<div class="card">
+
+    <h2>✨ Fitur Utama</h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-box">
+            <h3>📊 Dashboard</h3>
+            <p>
+                Menampilkan visualisasi data kualitas wine
+                secara interaktif.
+            </p>
+        </div>
+
+        <div class="feature-box">
+            <h3>🤖 Machine Learning</h3>
+            <p>
+                Model Linear Regression digunakan untuk
+                memprediksi nilai kualitas wine.
+            </p>
+        </div>
+
+        <div class="feature-box">
+            <h3>🍇 Prediksi Cepat</h3>
+            <p>
+                Input karakteristik wine dan dapatkan
+                hasil prediksi secara langsung.
+            </p>
+        </div>
+
+        <div class="feature-box">
+            <h3>📈 Data Analysis</h3>
+            <p>
+                Menampilkan insight mengenai faktor-faktor
+                yang mempengaruhi kualitas wine.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="card">
+
+    <h2>📌 Informasi Model</h2>
+
+    <table class="info-table">
+        <tr>
+            <td>Algoritma</td>
+            <td>:</td>
+            <td>Linear Regression</td>
+        </tr>
+
+        <tr>
+            <td>Jumlah Fitur</td>
+            <td>:</td>
+            <td>12 Parameter Kimia</td>
+        </tr>
+
+        <tr>
+            <td>Output</td>
+            <td>:</td>
+            <td>Nilai Kualitas Wine (0-10)</td>
+        </tr>
+
+        <tr>
+            <td>Kategori</td>
+            <td>:</td>
+            <td>Low • Medium • High • Excellent</td>
+        </tr>
+    </table>
+
 </div>
 
 {% endblock %}
