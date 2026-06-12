@@ -2,72 +2,93 @@
 
 {% block content %}
 
-<div class="card">
+<div class="card prediction-card">
 
+<div class="prediction-banner">
     <h1>🍷 Prediksi Kualitas Wine</h1>
+    <p>
+        Masukkan karakteristik kimia wine untuk memperoleh estimasi
+        kualitas berdasarkan model Linear Regression.
+    </p>
+</div>
 
-    <form method="POST">
+<form method="POST">
 
-        <div class="form-grid">
+    <div class="form-grid">
 
-            <div>
-                <label>Fixed Acidity</label>
-                <input type="number" step="any" name="fixed_acidity" required>
+        <div class="form-section">
 
-                <label>Volatile Acidity</label>
-                <input type="number" step="any" name="volatile_acidity" required>
+            <label>Fixed Acidity</label>
+            <input type="number" step="any" name="fixed_acidity" required>
 
-                <label>Citric Acid</label>
-                <input type="number" step="any" name="citric_acid" required>
+            <label>Volatile Acidity</label>
+            <input type="number" step="any" name="volatile_acidity" required>
 
-                <label>Residual Sugar</label>
-                <input type="number" step="any" name="residual_sugar" required>
+            <label>Citric Acid</label>
+            <input type="number" step="any" name="citric_acid" required>
 
-                <label>Chlorides</label>
-                <input type="number" step="any" name="chlorides" required>
+            <label>Residual Sugar</label>
+            <input type="number" step="any" name="residual_sugar" required>
 
-                <label>Free Sulfur Dioxide</label>
-                <input type="number" step="any" name="free_sulfur_dioxide" required>
-            </div>
+            <label>Chlorides</label>
+            <input type="number" step="any" name="chlorides" required>
 
-            <div>
-                <label>Total Sulfur Dioxide</label>
-                <input type="number" step="any" name="total_sulfur_dioxide" required>
-
-                <label>Density</label>
-                <input type="number" step="any" name="density" required>
-
-                <label>pH</label>
-                <input type="number" step="any" name="pH" required>
-
-                <label>Sulphates</label>
-                <input type="number" step="any" name="sulphates" required>
-
-                <label>Alcohol</label>
-                <input type="number" step="any" name="alcohol" required>
-
-                <label>Wine Type</label>
-                <select name="wine_type">
-                    <option value="0">Red Wine</option>
-                    <option value="1">White Wine</option>
-                </select>
-            </div>
+            <label>Free Sulfur Dioxide</label>
+            <input type="number" step="any" name="free_sulfur_dioxide" required>
 
         </div>
 
-        <button type="submit" class="btn">
-            🔮 Prediksi
-        </button>
+        <div class="form-section">
 
-    </form>
+            <label>Total Sulfur Dioxide</label>
+            <input type="number" step="any" name="total_sulfur_dioxide" required>
 
-    {% if prediction is not none %}
-    <div class="result">
-        <h2>Hasil Prediksi</h2>
-        <h1>{{ prediction }}</h1>
-        <h3>{{ category }}</h3>
+            <label>Density</label>
+            <input type="number" step="any" name="density" required>
+
+            <label>pH</label>
+            <input type="number" step="any" name="pH" required>
+
+            <label>Sulphates</label>
+            <input type="number" step="any" name="sulphates" required>
+
+            <label>Alcohol</label>
+            <input type="number" step="any" name="alcohol" required>
+
+            <label>Wine Type</label>
+            <select name="wine_type">
+                <option value="0">Red Wine</option>
+                <option value="1">White Wine</option>
+            </select>
+
+        </div>
+
     </div>
-    {% endif %}
+
+    <div class="predict-action">
+        <button type="submit" class="predict-btn">
+            Generate Prediction
+        </button>
+    </div>
+
+</form>
+
+{% if prediction is not none %}
+
+<div class="result-modern">
+
+    <div class="result-score">
+        {{ prediction }}
+    </div>
+
+    <div class="result-info">
+        <h2>Prediction Result</h2>
+        <p>{{ category }}</p>
+    </div>
+
+</div>
+
+{% endif %}
 
 </div>
 

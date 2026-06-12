@@ -2,33 +2,58 @@
 
 {% block content %}
 
-<div class="card hero-card">
+<div class="hero-section">
 
-    <h1>🍷 Wine Quality Prediction System</h1>
+    <div class="hero-content">
 
-    <p class="subtitle">
-        Analisis dan prediksi kualitas wine menggunakan
-        <b>Machine Learning - Linear Regression</b>.
-    </p>
+        <h1>
+            Wine Quality Prediction System
+        </h1>
 
-    <p>
-        Sistem ini membantu memprediksi kualitas wine berdasarkan
-        karakteristik kimia seperti acidity, sugar, alcohol,
-        sulphates, dan parameter lainnya.
-    </p>
+        <p class="subtitle">
+            Predict wine quality using chemical characteristics and
+            Linear Regression Machine Learning models.
+        </p>
 
-    <div class="button-group">
-        <a href="/predict">
-            <button class="btn">
-                🔮 Mulai Prediksi
-            </button>
-        </a>
+        <div class="button-group">
+            <a href="/predict">
+                <button class="btn">
+                    Start Prediction
+                </button>
+            </a>
 
-        <a href="/dashboard">
-            <button class="btn-secondary">
-                📊 Lihat Dashboard
-            </button>
-        </a>
+            <a href="/dashboard">
+                <button class="btn-secondary">
+                    View Dashboard
+                </button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="stats-grid">
+
+    <div class="stat-card">
+        <h2>12</h2>
+        <p>Features</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>6,497</h2>
+        <p>Wine Records</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>Linear Regression</h2>
+        <p>Algorithm</p>
+    </div>
+
+    <div class="stat-card">
+        <h2>4 Levels</h2>
+        <p>Categories</p>
     </div>
 
 </div>
@@ -36,39 +61,35 @@
 
 <div class="card">
 
-    <h2>✨ Fitur Utama</h2>
+    <h2>System Features</h2>
 
     <div class="feature-grid">
 
         <div class="feature-box">
-            <h3>📊 Dashboard</h3>
+            <h3>Dashboard Analytics</h3>
             <p>
-                Menampilkan visualisasi data kualitas wine
-                secara interaktif.
+                Explore wine quality insights through interactive visualizations.
             </p>
         </div>
 
         <div class="feature-box">
-            <h3>🤖 Machine Learning</h3>
+            <h3>Machine Learning</h3>
             <p>
-                Model Linear Regression digunakan untuk
-                memprediksi nilai kualitas wine.
+                Predict wine quality using a trained Linear Regression model.
             </p>
         </div>
 
         <div class="feature-box">
-            <h3>🍇 Prediksi Cepat</h3>
+            <h3>Real-Time Prediction</h3>
             <p>
-                Input karakteristik wine dan dapatkan
-                hasil prediksi secara langsung.
+                Input wine characteristics and instantly obtain prediction results.
             </p>
         </div>
 
         <div class="feature-box">
-            <h3>📈 Data Analysis</h3>
+            <h3>Feature Analysis</h3>
             <p>
-                Menampilkan insight mengenai faktor-faktor
-                yang mempengaruhi kualitas wine.
+                Identify factors that most influence wine quality.
             </p>
         </div>
 
@@ -79,32 +100,30 @@
 
 <div class="card">
 
-    <h2>📌 Informasi Model</h2>
+    <h2>Model Information</h2>
 
     <table class="info-table">
+
         <tr>
-            <td>Algoritma</td>
-            <td>:</td>
+            <td>Algorithm</td>
             <td>Linear Regression</td>
         </tr>
 
         <tr>
-            <td>Jumlah Fitur</td>
-            <td>:</td>
-            <td>12 Parameter Kimia</td>
+            <td>Input Features</td>
+            <td>12 Chemical Parameters</td>
         </tr>
 
         <tr>
             <td>Output</td>
-            <td>:</td>
-            <td>Nilai Kualitas Wine (0-10)</td>
+            <td>Wine Quality Score</td>
         </tr>
 
         <tr>
-            <td>Kategori</td>
-            <td>:</td>
+            <td>Categories</td>
             <td>Low • Medium • High • Excellent</td>
         </tr>
+
     </table>
 
 </div>
